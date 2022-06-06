@@ -1,0 +1,3 @@
+spring is
+a) a framework for java applications
+b) an ecosystem of connected modules
