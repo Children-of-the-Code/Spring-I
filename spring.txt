@@ -9,7 +9,7 @@ on a DAO class, and had to instantiate a DAO class at the start
 The first that Spring changes, is that it can allow us to avoid this and let Spring
 manage all of our dependencies on its own
 
-/*
+1-
 now that we've got spring set up.. we can let it manage some dependencies
 in this case, our class here will scan its package (being currently the entire 'java' folder)
 for classes that are marked as components
@@ -18,4 +18,32 @@ objects that are managed by Spring are referred to as beans
 
 spring has something called the Inversion of Control container that contains all of these beans
 Inversion of Control - means that the developer no longer manages dependencies - instead Spring controls them
- */
+
+2-
+advantages of beans
+a) Spring will manage 'scope' for us
+scope of a bean - scope that a single instance of an object exists in
+
+default is a Singleton - a single object that is shared across the entire application
+Prototype resembles more of a regular java object - a new one is created every time the bean is referenced
+
+there are more scopes we'll talk about later (all of them have to do with interacting with the web)
+
+3-
+more annotations :
+@Component - designates this class as a candidate for a bean (a component of our application)
+@Bean - designates a constructor for the component
+@Autowired - automatically grab the appropriate bean to be used for this class
+
+if you're looking into spring examples, you're going to see that spring is used wildly differently than
+the way i'm writing here -
+a) there is xml configuration (old) and annotation configuration
+b) there are different types of autowirings - we can inject dependencies in three different ways
+    i) we can use constructor injection (my preferred way)
+    ii) we can write a setter method and add autowired over it (setter injection)
+    iii) we can write autowired over the field itself (field injection, not recommended)
+c) stereotyped annotations - we can also replace the @Component annotation with @Service or @Repository, etc
+    this doesn't really do anything (other than eg default to a specific scope), it's just to make classes
+    easier for developers to read and interpret
+    i'm going to be using only @Component to help you understand the relationship between the class definition
+    and its bean
