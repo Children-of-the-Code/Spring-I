@@ -33,4 +33,9 @@ public class BookController {
     public void deleteBookByName(@PathVariable String name){
         bookService.deleteBookByName(name);
     }
+    @GetMapping("/name/{author}")
+    public Book getBookByAuthor(@PathVariable String author){
+//        completed?
+        return null;
+    }
 }
