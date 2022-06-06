@@ -1,0 +1,35 @@
+Software Development Lifecycle
+when we develop software, we think that we need to do these steps...
+
+Gather requirements
+Plan
+Develop
+Test
+Deploy
+Maintenance
+
+(waterfall methodology: we move between these steps and do not progress until we finish)
+
+but... this leads to inefficiencies
+a) what if requirements change? (picky clients)
+b) what if going through this process is inefficient - ie we run out of time and budget halfway thorugh
+
+alternative: agile methodology
+specifically, scrum
+
+rather than go one-by-one, we have a bi-weekly sprint where we iterate through every step with
+a small selection of features
+(so we spend 2 weeks building, testing, deploying our app and then we select a new set of requirements
+to work on in the next sprint)
+
+the point of this... dont get too ahead of yourselves
+keep your scope small and doable, focus on project reqs
+
+
+
+
+
+
+
+git stuff
+now that you're working in groups, you need to leverage git branching / git flow
