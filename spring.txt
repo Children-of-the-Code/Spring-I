@@ -1,3 +1,21 @@
 spring is
 a) a framework for java applications
-b) an ecosystem of connected modules
+b) an ecosystem of connected modules - eg MVC (web), JPA (DB interaction), Security, etc
+
+the core of spring revolves around dependency injection
+previously we had dependencies between our own classes - eg service is dependent
+on a DAO class, and had to instantiate a DAO class at the start
+
+The first that Spring changes, is that it can allow us to avoid this and let Spring
+manage all of our dependencies on its own
+
+/*
+now that we've got spring set up.. we can let it manage some dependencies
+in this case, our class here will scan its package (being currently the entire 'java' folder)
+for classes that are marked as components
+next, it will manage those classes as dependencies for us
+objects that are managed by Spring are referred to as beans
+
+spring has something called the Inversion of Control container that contains all of these beans
+Inversion of Control - means that the developer no longer manages dependencies - instead Spring controls them
+ */
