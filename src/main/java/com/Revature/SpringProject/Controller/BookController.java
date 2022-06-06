@@ -38,4 +38,10 @@ public class BookController {
 //        completed?
         return null;
     }
+    @GetMapping("/id/{id}")
+    public Book getBookByAuthor(@PathVariable int id){
+//        completed?
+        return null;
+    }
+
 }
